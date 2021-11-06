@@ -35,16 +35,16 @@ const kTextoDosBotoesDaTelaInicial =
     TextStyle(fontSize: 18, color: Colors.black, fontWeight: FontWeight.bold);
 
 const kTextoDaBarra =
-    TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white);
+    TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white);
 
 var kCorDaBarra = Color(0xFF842382); //(0xFFd345d1);
 
 var kSombraCor = Colors.grey;
 
 const kTelaDeCadastroTexto =
-    TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
+    TextStyle(fontSize: 22, fontWeight: FontWeight.bold);
 
 const kTelaDeCadastroTextoPadrao =
-    TextStyle(fontSize: 12, fontWeight: FontWeight.bold);
+    TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold);
 
 const kTelaDeCadastroTextoOpcao = TextStyle(fontSize: 12);

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Cadastro%20de%20Pacientes/cadastro_de_paciente.dart';
 import 'package:flutter_application_1/Widgets/barra_app.dart';
 import 'package:flutter_application_1/Widgets/botao_tela_inicial.dart';
 import 'package:flutter_application_1/Widgets/constantes.dart';
@@ -70,7 +71,15 @@ class _TelaInicialState extends State<TelaInicial> {
                   nomeImagem: 'add paciente.png',
                   alturaImagem: 90,
                   larguraImagem: 80,
-                  aoInteragir: () {},
+                  aoInteragir: () {
+                    setState(() {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CadastroDePaciente(),
+                          ));
+                    });
+                  },
                 )
               ],
             ),

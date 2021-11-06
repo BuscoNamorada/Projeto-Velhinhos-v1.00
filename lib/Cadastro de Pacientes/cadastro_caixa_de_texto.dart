@@ -29,7 +29,7 @@ class CadastroCaixaDeTexto extends StatelessWidget {
             borderRadius: BorderRadius.circular(bordaCircular),
             boxShadow: [kBoxTextShadow]),
         child: Padding(
-          padding: const EdgeInsets.all(3.0),
+          padding: const EdgeInsets.symmetric(horizontal: 3.0),
           child: TextFormField(
             keyboardType: TextInputType.emailAddress,
             obscureText: texto == TipoDeTexto.password ? true : false,

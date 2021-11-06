@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Widgets/constantes.dart';
 
-class CaixaDeTexto extends StatelessWidget {
+class CaixaDeTexto extends StatefulWidget {
   final TipoDeTexto? texto;
   final String? hintText;
   final double? altura;
@@ -21,29 +21,37 @@ class CaixaDeTexto extends StatelessWidget {
       : super(key: key);
 
   @override
+  State<CaixaDeTexto> createState() => _CaixaDeTextoState();
+}
+
+class _CaixaDeTextoState extends State<CaixaDeTexto> {
+  // Controlador do textformfield:
+  var boxController = TextEditingController();
+  @override
   Widget build(BuildContext context) {
     return Container(
-      height: altura,
-      width: largura,
-      margin: EdgeInsets.symmetric(horizontal: margem),
+      height: widget.altura,
+      width: widget.largura,
+      margin: EdgeInsets.symmetric(horizontal: widget.margem),
       decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(bordaCircular),
+          borderRadius: BorderRadius.circular(widget.bordaCircular),
           boxShadow: [kBoxTextShadow]),
       child: Padding(
         padding: const EdgeInsets.all(3.0),
         child: TextFormField(
           keyboardType: TextInputType.emailAddress,
-          obscureText: texto == TipoDeTexto.password ? true : false,
+          obscureText: widget.texto == TipoDeTexto.password ? true : false,
           cursorColor: Colors.black,
           cursorWidth: 1,
           cursorHeight: 20,
           style: TextStyle(
               color: Colors.black, fontSize: 13, fontStyle: FontStyle.italic),
           decoration: InputDecoration(
-              hintText: hintText,
+              hintText: widget.hintText,
               hintStyle: kHintTextStyle,
               border: InputBorder.none),
+          controller: boxController,
         ),
       ),
     );
