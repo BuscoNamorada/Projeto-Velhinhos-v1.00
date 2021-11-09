@@ -35,6 +35,7 @@ class _CadastroDePacienteState extends State<CadastroDePaciente> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(height: 5),
               Center(
                 child: Text(
                   'AVALIAÇÃO BÁSICA',
@@ -46,12 +47,15 @@ class _CadastroDePacienteState extends State<CadastroDePaciente> {
                 '1. IDENTIFICAÇÃO',
                 style: kTelaDeCadastroTexto,
               ),
+              SizedBox(height: 5),
               TextoMaisTextform(
                 texto: 'Cenário de Prática:',
               ),
               TextoMaisTextform(
                 texto: 'Nome do Idoso:',
               ),
+              SizedBox(height: kSizedBox50),
+
               Row(
                 //TODO: Criar uma função que faz com que só seja possível escolher uma opção
                 children: [
@@ -61,6 +65,8 @@ class _CadastroDePacienteState extends State<CadastroDePaciente> {
                   TextoMaisCheckbox(texto: 'Feminino'),
                 ],
               ),
+              SizedBox(height: kSizedBox50),
+
               TextoMaisTextform(
                 texto: 'Profissão/ ocupação atual:',
               ),
@@ -80,16 +86,19 @@ class _CadastroDePacienteState extends State<CadastroDePaciente> {
               ),
               TextoMaisTextform(
                   texto: 'Caso seja aposentado, há quanto tempo?'),
+              SizedBox(height: kSizedBox50),
 
               //todo: Criar a parte da data de nascimento
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text('CRIAR AQUI A PARTE DE NASCIMENTO'),
               ),
+              SizedBox(height: kSizedBox50),
 
               TextoMaisTextform(texto: 'Naturalidade:'),
               TextoMaisTextform(texto: 'Estado:'),
               TextoMaisTextform(texto: 'País:'),
+              SizedBox(height: kSizedBox50),
 
               TextoMaisTextform(texto: 'Raça/Etnia:'),
               TextoMaisTextform(texto: 'Crença religiosa:'),
@@ -102,7 +111,8 @@ class _CadastroDePacienteState extends State<CadastroDePaciente> {
                 ],
               ),
               TextoMaisTextform(texto: 'Há quanto tempo?'),
-              SizedBox(height: 10),
+              SizedBox(height: kSizedBox50),
+
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -118,30 +128,244 @@ class _CadastroDePacienteState extends State<CadastroDePaciente> {
                 ),
               ),
               TextoMaisTextform(texto: 'Há quanto tempo?'),
-              SizedBox(height: 50),
+              SizedBox(height: kSizedBox50),
 
               Text('Renda mensal:', style: kTelaDeCadastroTextoPadrao),
               TextoMaisTextform(texto: 'Salário mínimo vigente:'),
               //TODO: Fazer aqui a parte da renda mensal
-              SizedBox(height: 50),
+              SizedBox(height: kSizedBox50),
 
               Text('Escolaridade:', style: kTelaDeCadastroTextoPadrao),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: <Widget>[
-                    SizedBox(width: 6),
                     TextoMaisCheckbox(texto: 'Analfabeto'),
                     TextoMaisCheckbox(texto: 'Analfabeto sem escolarização'),
+                  ],
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
                     TextoMaisCheckbox(
                         texto:
                             'Ensino fundamental incompleto (antigo primário e ginásio)'),
                   ],
                 ),
               ),
-              // Caso sena ensino fundamental incompleto
-              TextoMaisCheckbox(texto: 'Até que série?'),
-              TextoMaisCheckbox(texto: 'Número de anos que estudou:'),
+              //TODO: Fazer um método que só chama esses dois abaixo se o usuário selecionar fundamental incompleto.
+              TextoMaisTextform(texto: 'Até que série?'),
+              TextoMaisTextform(texto: 'Número de anos que estudou:'),
+
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    TextoMaisCheckbox(
+                        texto:
+                            'Ensino fundamental completo (antigo primário e ginásio)'),
+                  ],
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    TextoMaisCheckbox(
+                        texto:
+                            'Ensino médio incompleto (antigo colegial ou normal)'),
+                  ],
+                ),
+              ),
+              //TODO: Fazer um método que só chama esses dois abaixo se o usuário selecionar ensino médio incompleto.
+              TextoMaisTextform(texto: 'Até que série?'),
+              TextoMaisTextform(texto: 'Número de anos que estudou:'),
+
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    TextoMaisCheckbox(
+                        texto:
+                            'Ensino médio completo (antigo colegial ou normal)'),
+                  ],
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    TextoMaisCheckbox(texto: 'Superior incompleto'),
+                  ],
+                ),
+              ),
+              //TODO: Fazer um método que só chama esses dois abaixo se o usuário selecionar superior incompleto.
+              TextoMaisTextform(texto: 'Número de anos que estudou:'),
+
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    TextoMaisCheckbox(texto: 'Superior completo'),
+                    TextoMaisCheckbox(texto: 'Pós-graduação'),
+                  ],
+                ),
+              ),
+              SizedBox(height: kSizedBox50),
+              TextoMaisTextform(texto: 'Endereço:'),
+              TextoMaisTextform(texto: 'Ponto de Referência:'),
+              TextoMaisTextform(texto: 'Telefone:'),
+              TextoMaisTextform(texto: 'E-mail:'),
+              TextoMaisTextform(texto: 'Mora com quem?:'),
+              TextoMaisTextform(texto: 'Grau de parentesco:'),
+              SizedBox(height: kSizedBox50),
+
+              Text('Em caso de necessidade, entrar em contato com: ',
+                  style: kTelaDeCadastroTextoPadrao),
+              TextoMaisTextform(texto: 'Nome:'),
+
+              //TODO: fazer a data de nascimento
+              Text('FAZER A DATA DE NASCIMENTO AQUI'),
+
+              TextoMaisTextform(texto: 'Endereço:'),
+              TextoMaisTextform(texto: 'Ponto de Referência:'),
+              TextoMaisTextform(texto: 'Telefone(s):'),
+              SizedBox(height: kSizedBox50),
+
+              Text('Situação de moradia e saneamento: ',
+                  style: kTelaDeCadastroTextoPadrao),
+
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    Text('Tipo de casa: ', style: kTelaDeCadastroTextoPadrao),
+                    SizedBox(width: 5),
+                    TextoMaisCheckbox(texto: 'Térrea'),
+                    TextoMaisCheckbox(texto: 'Apartamento'),
+                    TextoMaisCheckbox(texto: 'Sobrado'),
+                  ],
+                ),
+              ),
+              //TODO: Criar um método que só chama essa opção se for selecionado apartamento
+              TextoMaisTextform(texto: 'Mora no andar:'),
+
+              //TODO: Criar um método que só chama essa opção se for selecionado sobrado
+              TextoMaisTextform(texto: 'N° de andares:'),
+
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    Text('Tipo de construção: ',
+                        style: kTelaDeCadastroTextoPadrao),
+                    SizedBox(width: 5),
+                    TextoMaisCheckbox(texto: 'Tijolo/adobe'),
+                    TextoMaisCheckbox(texto: 'Taipa'),
+                    TextoMaisCheckbox(texto: 'Madeira'),
+                    TextoMaisCheckbox(texto: 'Material aproveitado'),
+                  ],
+                ),
+              ),
+
+              TextoMaisTextform(texto: 'Outro:'),
+              TextoMaisTextform(texto: 'Número de cômodos:'),
+
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    Text('Possui energia elétrica? ',
+                        style: kTelaDeCadastroTextoPadrao),
+                    SizedBox(width: 5),
+                    TextoMaisCheckbox(texto: 'Sim'),
+                    TextoMaisCheckbox(texto: 'Não'),
+                  ],
+                ),
+              ),
+              TextoMaisTextform(texto: 'Caso não, por quê?'),
+
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    Text('Tratamento de água: ',
+                        style: kTelaDeCadastroTextoPadrao),
+                    SizedBox(width: 5),
+                    TextoMaisCheckbox(texto: 'Filtração'),
+                    TextoMaisCheckbox(texto: 'Fervura'),
+                    TextoMaisCheckbox(texto: 'Coloração'),
+                    TextoMaisCheckbox(texto: 'Sem tratamento'),
+                  ],
+                ),
+              ),
+
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    Text('Abastecimento de água: ',
+                        style: kTelaDeCadastroTextoPadrao),
+                    SizedBox(width: 5),
+                    TextoMaisCheckbox(texto: 'Rede pública'),
+                    TextoMaisCheckbox(texto: 'Poço ou nascente'),
+                  ],
+                ),
+              ),
+              TextoMaisTextform(texto: 'Outro:'),
+
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    Text('Destino do lixo: ',
+                        style: kTelaDeCadastroTextoPadrao),
+                    SizedBox(width: 5),
+                    TextoMaisCheckbox(texto: 'Coletado'),
+                    TextoMaisCheckbox(texto: 'Queimado/enterrado'),
+                    TextoMaisCheckbox(texto: 'Céu aberto'),
+                  ],
+                ),
+              ),
+              TextoMaisTextform(texto: 'Outro:'),
+
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    Text('Coleta seletiva? ',
+                        style: kTelaDeCadastroTextoPadrao),
+                    SizedBox(width: 5),
+                    TextoMaisCheckbox(texto: 'Sim'),
+                    TextoMaisCheckbox(texto: 'Não'),
+                  ],
+                ),
+              ),
+
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    Text('Destino de fezes/urina: ',
+                        style: kTelaDeCadastroTextoPadrao),
+                    SizedBox(width: 5),
+                    TextoMaisCheckbox(texto: 'Sistema de esgoto (rede local)'),
+                    TextoMaisCheckbox(texto: 'Fossa'),
+                    TextoMaisCheckbox(texto: 'Céu aberto'),
+                  ],
+                ),
+              ),
+              TextoMaisTextform(texto: 'Outro:'),
+
+              // FIM DA ETAPA DE IDENTIFICAÇÃO
+              SizedBox(height: kSizedBox50),
+              Text(
+                '1. INFORMAÇÕES IMPORTANTES',
+                style: kTelaDeCadastroTexto,
+              ),
+              SizedBox(height: 5),
             ],
           ),
         ),

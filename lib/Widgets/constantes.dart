@@ -48,3 +48,5 @@ const kTelaDeCadastroTextoPadrao =
     TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold);
 
 const kTelaDeCadastroTextoOpcao = TextStyle(fontSize: 12);
+
+const kSizedBox50 = 40.0;
