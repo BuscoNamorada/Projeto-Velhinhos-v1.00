@@ -23,6 +23,7 @@ class _TelaInicialState extends State<TelaInicial> {
           barraIcone: Icons.account_circle,
           aoPressionar: () {},
         ),
+        backgroundColor: kCorDaBarra,
       ),
       body: SingleChildScrollView(
         child: Column(

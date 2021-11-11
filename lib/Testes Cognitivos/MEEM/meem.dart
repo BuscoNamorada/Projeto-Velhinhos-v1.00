@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Testes Cognitivos/MEEM/perguntas.dart';
 import 'package:flutter_application_1/Widgets/barra_app.dart';
+import 'package:flutter_application_1/Widgets/constantes.dart';
 
 Perguntas perguntas = Perguntas();
 
@@ -17,6 +18,7 @@ class _MEEMState extends State<MEEM> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: kCorDaBarra,
         title: BarraApp(
           barraTexto: 'MEEM',
         ),
@@ -24,6 +26,7 @@ class _MEEMState extends State<MEEM> {
       //TODO: aqui vai ser criado o exame
       body: Column(
         children: [
+          /*
           Expanded(
             flex: 5,
             child: Padding(
@@ -39,6 +42,7 @@ class _MEEMState extends State<MEEM> {
               ),
             ),
           ),
+          */
         ],
       ),
     );

@@ -23,6 +23,7 @@ class _CadastroDePacienteState extends State<CadastroDePaciente> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: kCorDaBarra,
         title: BarraApp(
           barraTexto: 'Cadastro de Paciente',
           barraIcone: Icons.home,

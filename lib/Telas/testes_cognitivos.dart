@@ -22,9 +22,11 @@ class _TestesCognitivosState extends State<TestesCognitivos> {
           barraIcone: Icons.home,
           aoPressionar: () {},
         ),
+        backgroundColor: kCorDaBarra,
       ),
       body: SingleChildScrollView(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(height: 20),
             Text(

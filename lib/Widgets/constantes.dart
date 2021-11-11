@@ -37,7 +37,7 @@ const kTextoDosBotoesDaTelaInicial =
 const kTextoDaBarra =
     TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white);
 
-var kCorDaBarra = Color(0xFF842382); //(0xFFd345d1);
+var kCorDaBarra = Color(0xFF842382); //
 
 var kSombraCor = Colors.grey;
 
